@@ -1,0 +1,151 @@
+{
+    "symptom": "fever",
+    "criteria": "If oral T >98.9°F (at AM) or T >99.9°F (at PM)",
+    "differentialDiagnoses": [
+        "UTI",
+        "malaria",
+        "pneumonia",
+        "cellulitis",
+        "abscess",
+        "influenza",
+        "leptospirosis",
+        "dengue",
+        "gastroenteritis",
+        "meningitis",
+        "tonsillitis",
+        "IMN",
+        "TB"
+    ],
+    "treatment": [
+        {
+            "step": "1.INJ P mol 2cc (150 /1 ml) im st (if t>1000 F). 100 ml(1000mg) infusion available(T.NParacip). [for children 10-15 mg/kg/dose,1.5cc/1cc im st] (for infants and small children give suppositories (T N:-Anamol), normally available as 80,125,170,250 mg; for <5 kg not recommended); Inj Dolonex (piroxicam) 2cc IM st ATD if allergic to P/L"
+        },
+        {
+            "step": "2.Tepid sponging with luke warm water st & SOS;give IV fluids for very high fever."
+        },
+        {
+            "step": "3. Do BRE,ESR/CRP,URE , if infection is suspected & give Antibiotics for infection."
+        },
+        {
+            "step": "4. T or Syp Meftal may be given Stat for high fever."
+        },
+        {
+            "step": "5. Antiulcerants(especially if certain antibiotics like macrolides, NSAIDs, steroids areprovided)."
+        },
+        {
+            "step": "6. Multivitamin tablets with Vit B complex, vit C."
+        },
+        {
+            "step": "7. Steam inhalation for relieving ENT congestion."
+        }
+
+    ],
+    "antibiotic": [
+        {
+          "dose": "1. C Mox or Novamox 500mg 1-1-1 x 5 days (amoxicillin) Indications: for RTI including bronchitis, sinusitis, otitis media, UTI"
+        },
+        {
+          "dose": "2. C Roscillin 500mg 1-1-1-1 x 5 days (ampicillin) Indications: for RTI including bronchitis, sinusitis, otitis media, UTI"
+        },
+        {
+          "dose": "3. C or T Augmentin/Augpen/Mox CV 625/375 1-0-1 x 5 days (amox + clavulanic acid) T.N: T Moxiforce-CV or Mega-CV 625, Novaclav 625, kid tab-228. Dose: 20 mg/kg/dose BD Indications: for RTI, UTI, dental, skin and soft tissue infections, intra-abdominal and gynecological sepsis, cat scratches, infected animal/human bites)"
+        },
+        {
+          "dose": "4. C Novaclox 1-1-1 x 5 days (amoxicillin + dicloxacillin) (dramaclox) (ped tab available)"
+        },
+        {
+          "dose": "5. C Megapen 1-1-1-1 x 5 days (ampicillin + cloxacillin) (kid tab available)"
+        },
+        {
+          "dose": "6. C Aldinir or Zefdinir 300mg 1-0-1 x 5 days (cefdinir) (very expensive) Indications: pneumonia, a/c exacerbations of c/c bronchitis, ENT, skin"
+        },
+        {
+          "dose": "7. C Phexin/ sporidex 500mg 1-1-1-1 x 5 days (cephalexin) Indications: For bone and joint infections, pharyngitis, skin and soft tissue, tonsillitis, UTI"
+        },
+        {
+          "dose": "8. T Azithral or Azee 500mg 1-0-0 x 3 days 1 hr before food (azithromycin) (specific for respiratory infections) (also for skin, STD's, PID, urethritis, cervicitis)"
+        },
+        {
+          "dose": "9. T Roxid 150mg 1-0-1 x 5 days 30 min before food (roxithromycin) (for RTI, ENT, skin & soft tissue, genital tract infections)"
+        },
+        {
+          "dose": "10. T Droxyl 500mg 1-0-1 x 5 days (cefadroxil); Syp (125/5 or 250/5) available (30 mg/kg/day in 2 div doses) (strep throat infections, UTI, skin)"
+        },
+        {
+          "dose": "11. T Taxim-O/ topcef 50/100/200mg (DT tab available) 1-0-1 x 5 days (cefixime) (resp, urinary, biliary infections)"
+        },
+        {
+          "dose": "12. T Ceftas-AL 1-0-1 x 5 days (cefixime+ambroxol+lactobacillus spores)"
+        },
+        {
+          "dose": "13. T Ciplox 500mg (100/250/750) 1-0-1 x 5 days (ciprofloxacin) (for UTI, bone, soft tissue, gynecological, wound infection, Bact gastroenteritis, Respiratory) (all other FQ's C/I in children)"
+        },
+        {
+          "dose": "14. T Norflox 400mg 1-0-1 x 5 days (norfloxacin) (for UTI & GIT problems) (advise to drink more water). Best, if taken empty stomach with water, don't take with dairy products"
+        },
+        {
+          "dose": "15. T Oflox / Zenflox 200mg 1-0-1 x 5 days (ofloxacin) (c/c bronchitis, other respiratory, ENT)"
+        },
+        {
+          "dose": "16. T Levobact or Levoday or Loxof 500mg 1-0-0 x 5 days (levofloxacin) (advise to drink more water)"
+        },
+        {
+          "dose": "17. T Septran/Bactrim d.s. 1-0-1 x 5 days (sulfamethoxazole 800 + trimethoprim 160) (advise to drink more water) Syp available (200 + 40)/5 ml"
+        },
+        {
+          "dose": "18. T Proflox 400mg 1-0-1 x 5 days (pefloxacin) (for UTI & GIT problems)"
+        },
+        {
+          "dose": "19. T Cepodem/Monocef-o/podocef/macpod 100/200mg 1-0-1x 5 days (cefpodoxime) (for RTI, UTI, skin and soft tissue)"
+        },
+        {
+          "dose": "20. T Klox (cloxacillin) 250/500 mg tds/Qid (furuncle, abscess, carbuncle, impetigo, osteomyelitis, bites), syp (125/5) (100-200mg/kg/day in 4 divided doses)"
+        },
+        {
+          "dose": "21. T clarithro/claribid/synclar (clarithromycin) 250/500 mg 1-0-1 (resp, skin & soft tissue)"
+        },
+        {
+          "dose": "22. T Altacef 250/500 1-0-1 (cefuroxime) (URI, LRI, UTI)"
+        }
+      ],
+      "pediatric-antibiotic": [
+        {
+          "dose": "1. Syp Amoxicillin (125 /5 or 250/5) [T N:- mox, Novamox] (DT 125, 250 mg available) Dose: 30-50 mg/kg daily in divided doses Q8H or Q12H. In Practice 15 mg/kg/doseQ8H Novamox Dps (100 /1) available"
+        },
+        {
+          "dose": "Syp Augmentin/Mox CV 228 /5, 156 /5, 312 /5 available, (Amoxicillin + clavulanic acid) NovamoxCV/Mox CV dps, each 1 ml contain amox=80 mg, clavulanic acid=11.4 mg. Augmentin/ MoxCV Syp 457 (400 + 57)/5ml, 156(125 + 31)/5ml, 228(200+28)/5ml, 312(250 +62) available."
+        },
+        {
+          "dose": "2. Syp Ampicillin(125 /5 or 250/5) Dose is 50-100 mg/kg/daily in divided doses Q6H"
+        },
+        {
+          "dose": "3. Syp Azithromycin(100 /5 or 200/5) {T N:- azee, ATM} (Dose for children above 6 months-10mg/kg/day for 5 days)"
+        },
+        {
+          "dose": "4. Syp Cefixime (50 /5 or 100 /5 ) {T N:- taxim-o, topcef} (8 mg/kg/day in divided doses Q12H), Dps 25/1 available"
+        },
+        {
+          "dose": "5. Syp Septran (sulfamethoxazole 200+ trimethoprim 40) (6-10 mg/kg/24 hr(TMP) div into 2 PO) (dose calculated in terms of mg of TMP). Paed tablets: (100+20)"
+        },
+        {
+          "dose": "6. Syp Ampoxin Or Syp Roscilox(ampicillin +cloxacillin)"
+        },
+        {
+          "dose": "7. Syp Synclar/Maclar(125 /5)(clarithromycin)(15 mg/kg/day in 2 divided doses) (URTI, LRTI, sinusitis, otitis media etc) (125 DT available)"
+        },
+        {
+          "dose": "8. Syp Kefpod/Macpod(50 /5 or 100/5)( cefpodoxime)(10 mg/kg/day div into 2 doses PO) (LRTI, URTI)"
+        },
+        {
+          "dose": "9. Syp Phexin(cephalexin)(125 /5 or 250/5) (50-100 mg/kg day in 3 or 4 doses PO)(DT125, 250mg available). Phexin Dps 100 /1 available."
+        },
+        {
+          "dose": "10. Syp Altacef (cefuroxime)(125 /5)(30 mg/kg/day div into 2-3)"
+        }
+      ],
+    "antipyretics": [
+        "Drug X",
+        "Drug Y",
+        "Drug Z"
+    ]
+}

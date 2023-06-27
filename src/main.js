@@ -21,6 +21,7 @@ function fetchData() {
           console.log("Disease property not found or undefined.");
         }
 
+        // Results are formatted here
         if (input === '' || input.length === 1) {
           resultDiv.innerHTML = '';
         }
@@ -34,8 +35,7 @@ function fetchData() {
                 var result = '<div class="list-group">' +
                   '<a href="#" class="glass list-group-item list-group-item-action">' +
                   // '<p> Disease: ' + database.symptom[i].disease + '</p>' +
-                  '<p> Drug name: ' + database.symptom[i].drugs[j].name + '</p>' +
-                  '<p> Generic name: ' + database.symptom[i].drugs[j].generic + '</p>' +
+                  '<p> Drug name: ' + database.symptom[i].drugs[j].name +'('+database.symptom[i].drugs[j].generic+')'+ '</p>' +
                   '<p> Pediatric Dose: ' + database.symptom[i].drugs[j].pediatric_dose + '</p>' +
                   '</a>'
 

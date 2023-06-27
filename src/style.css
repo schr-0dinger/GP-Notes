@@ -1,9 +1,24 @@
 body {
-    background-color: #003049;
     /* font-family: 'Poppins', sans-serif; */
     font-family: 'Space Mono', monospace;
+    background-image: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-h1 {
+.title{
     color: #F77F00;
+}
+
+.glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+#resultbox{
+    color: #fff;
 }

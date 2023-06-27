@@ -1,151 +1,639 @@
 {
-    "symptom": "fever",
-    "criteria": "If oral T >98.9°F (at AM) or T >99.9°F (at PM)",
-    "differentialDiagnoses": [
-        "UTI",
-        "malaria",
-        "pneumonia",
-        "cellulitis",
-        "abscess",
-        "influenza",
-        "leptospirosis",
-        "dengue",
-        "gastroenteritis",
-        "meningitis",
-        "tonsillitis",
-        "IMN",
-        "TB"
-    ],
-    "treatment": [
-        {
-            "step": "1.INJ P mol 2cc (150 /1 ml) im st (if t>1000 F). 100 ml(1000mg) infusion available(T.NParacip). [for children 10-15 mg/kg/dose,1.5cc/1cc im st] (for infants and small children give suppositories (T N:-Anamol), normally available as 80,125,170,250 mg; for <5 kg not recommended); Inj Dolonex (piroxicam) 2cc IM st ATD if allergic to P/L"
+  "symptom": [ 
+      
+{
+  "disease": "fever",
+  "description": "If oral Temp > 98.9°F (at AM) or Temp > 99.9°F (at PM)",
+  "treatment": [
+          "INJ P mol 2cc (150 /1 ml) im st (if t>1000 F). 100 ml(1000mg) infusion available(T.NParacip). [for children 10-15 mg/kg/dose,1.5cc/1cc im st] (for infants and small children give suppositories (T N:-Anamol), normally available as 80,125,170,250 mg; for <5 kg not recommended); Inj Dolonex (piroxicam) 2cc IM st ATD if allergic to P/L",
+          "Tepid sponging with luke warm water st & SOS;give IV fluids for very high fever.",
+          "Do BRE,ESR/CRP,URE , if infection is suspected & give Antibiotics for infection.",
+          "T or Syp Meftal may be given Stat for high fever.",
+          "Antiulcerants(especially if certain antibiotics like macrolides, NSAIDs, steroids areprovided).",
+          "Multivitamin tablets with Vit B complex, vit C.",
+          "Steam inhalation for relieving ENT congestion."
+  ],
+  "drugs": [
+      {
+          "type": ["antibiotic"],
+          "name": "C Mox / Novamox 500mg",
+          "generic": "Amoxicillin",
+          "dose": "500mg 1-1-1 x 5 days",
+          "pediatric_dose":"10-20mg/kg/dose",
+          "indications": "RTI, bronchitis, sinusitis, otitis media, UTI",
+          "contraindications": ""
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "C Roscillin 500mg",
+          "generic": "Ampicillin",
+          "dose": "1-1-1-1 x 5 days",
+          "indications": "RTI, bronchitis, sinusitis, otitis media, UTI"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "C or T Augmentin/Augpen/Mox CV 625/375",
+          "generic": "Amox + Clavulanic Acid",
+          "dose": "1-0-1 x 5 days",
+          "indications": "RTI, UTI, dental, skin and soft tissue infections, intra-abdominal and gynecological sepsis, cat scratches, infected animal/human bites)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "C Novaclox",
+          "generic": "Amoxicillin + Dicloxacillin",
+          "dose": "1-1-1 x 5 days",
+          "indications": "(dramaclox) (ped tab available)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "C Megapen",
+          "generic": "Ampicillin + Cloxacillin",
+          "dose": "1-1-1-1 x 5 days",
+          "indications": "(kid tab available)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "C Aldinir or Zefdinir 300mg",
+          "generic": "Cefdinir",
+          "dose": "1-0-1 x 5 days",
+          "indications": "(very expensive) Indications: pneumonia, a/c exacerbations of c/c bronchitis, ENT, skin"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "C Phexin/ sporidex 500mg",
+          "generic": "Cephalexin",
+          "dose": "1-1-1-1 x 5 days",
+          "indications": "Indications: For bone and joint infections, pharyngitis, skin and soft tissue, tonsillitis, UTI"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Azithral or Azee 500mg",
+          "generic": "Azithromycin",
+          "dose": "1-0-0 x 3 days 1 hr before food",
+          "indications": "(specific for respiratory infections) (also for skin, STD's, PID, urethritis, cervicitis)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Roxid 150mg",
+          "generic": "Roxithromycin",
+          "dose": "1-0-1 x 5 days 30 min before food",
+          "indications": "(for RTI, ENT, skin & soft tissue, genital tract infections)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Droxyl 500mg",
+          "generic": "Cefadroxil",
+          "dose": "1-0-1 x 5 days",
+          "indications": "; Syp (125/5 or 250/5) available (30 mg/kg/day in 2 div doses) (strep throat infections, UTI, skin)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Taxim-O/ topcef 50/100/200mg (DT tab available)",
+          "generic": "Cefixime",
+          "dose": "1-0-1 x 5 days",
+          "indications": "(resp, urinary, biliary infections)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Ceftas-AL",
+          "generic": "Cefixime + Ambroxol + Lactobacillus Spores",
+          "dose": "1-0-1 x 5 days"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Ciplox 500mg (100/250/750)",
+          "generic": "Ciprofloxacin",
+          "dose": "1-0-1 x 5 days",
+          "indications": "(for UTI, bone, soft tissue, gynecological, wound infection, Bact gastroenteritis, Respiratory) (all other FQ's C/I in children)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Norflox 400mg",
+          "generic": "Norfloxacin",
+          "dose": "1-0-1 x 5 days",
+          "indications": "(for UTI & GIT problems) (advise to drink more water). Best, if taken empty stomach with water, don't take with dairy products"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Oflox / Zenflox 200mg",
+          "generic": "Ofloxacin",
+          "dose": "1-0-1 x 5 days",
+          "indications": "(c/c bronchitis, other respiratory, ENT)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Levobact or Levoday or Loxof 500mg",
+          "generic": "Levofloxacin",
+          "dose": "1-0-0 x 5 days",
+          "indications": "(advise to drink more water)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Septran/Bactrim d.s.",
+          "generic": "Sulfamethoxazole 800 + Trimethoprim 160",
+          "dose": "1-0-1 x 5 days",
+          "indications": "(advise to drink more water) Syp available (200 + 40)/5 ml"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Proflox 400mg",
+          "generic": "Pefloxacin",
+          "dose": "1-0-1 x 5 days",
+          "indications": "(for UTI & GIT problems)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Cepodem/Monocef-o/podocef/macpod 100/200mg",
+          "generic": "Cefpodoxime",
+          "dose": "1-0-1x 5 days",
+          "indications": "(for RTI, UTI, skin and soft tissue)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Klox (cloxacillin) 250/500 mg",
+          "generic": "Tds/Qid (furuncle, abscess, carbuncle, impetigo, osteomyelitis, bites)",
+          "dose": "syp (125/5) (100-200mg/kg/day in 4 divided doses)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T clarithro/claribid/synclar",
+          "generic": "Clarithromycin",
+          "dose": "250/500 mg 1-0-1",
+          "indications": "(resp, skin & soft tissue)"
+      },
+      {
+          "type": ["antibiotic"],
+          "name": "T Altacef 250/500",
+          "generic": "Cefuroxime",
+          "dose": "1-0-1",
+          "indications": "(URI, LRI, UTI)"
+      },
+      {
+          "type": ["anti-pyretic","analgesic"],
+          "name": "T Calpol/Panadol/Dolo 500mg/650mg",
+          "generic": "P'mol or Acetaminophen",
+          "dose": "1-1-1-1 x 3 days"
+      },
+      {
+          "type": ["anti-pyretic","analgesic"],
+          "name": "T Ibugesic or Brufen 200/400/600mg",
+          "generic": "Ibuprofen",
+          "dose": "1-0-1 x 3 days"
+      },
+      {
+          "type": ["anti-pyretic","analgesic"],
+          "name": "T Meftal or Ponstan 250mg/500",
+          "generic": "Mefenamic Acid",
+          "dose": "1-1-1 x 3 days",
+          "indications": "(ideal for dental pain)"
+      },
+      {
+          "type": ["anti-pyretic","analgesic"],
+          "name": "T Pirox/Dolonex 20mg",
+          "generic": "Piroxicam",
+          "dose": "1-0-0 x 3 days"
+      },
+      {
+          "type": ["anti-pyretic","analgesic"],
+          "name": "T Ibugesic Plus",
+          "generic": "Ibuprofen + P'mol",
+          "dose": "1-0-1"
+      },
+      {
+          "type": ["anti-pyretic","analgesic"],
+          "name": "T Meftal Forte/Meftagesic",
+          "generic": "Meftal 500 + P/L 450"
+      },
+      {
+          "type": ["vitamin"],
+          "name": "T Beplex Forte",
+          "generic": "Vitamin B complex with folic acid, vitamin C",
+          "dose": "OD (once daily)",
+          "availability": "Syrup available"
         },
         {
-            "step": "2.Tepid sponging with luke warm water st & SOS;give IV fluids for very high fever."
+          "type": ["vitamin"],
+          "name": "T Bicozinc",
+          "generic": "Vitamin B complex with folic acid, vitamin C, zinc sulfate",
+          "dose": "OD (once daily)",
+          "availability": "Syrup available"
         },
         {
-            "step": "3. Do BRE,ESR/CRP,URE , if infection is suspected & give Antibiotics for infection."
+          "type": ["vitamin"],
+          "name": "C Becosules",
+          "generic": "Vitamin B complex with folic acid, vitamin C",
+          "dose": "OD (once daily)",
+          "availability": "Syrup available"
         },
         {
-            "step": "4. T or Syp Meftal may be given Stat for high fever."
+          "type": ["vitamin", "probiotic"],
+          "name": "C Nutrolin B Plus",
+          "generic": "Vitamin B complex with folic acid, lactobacillus",
+          "dose": "OD (once daily)",
+          "availability": "Syrup available"
         },
         {
-            "step": "5. Antiulcerants(especially if certain antibiotics like macrolides, NSAIDs, steroids areprovided)."
+          "type": ["vitamin"],
+          "name": "T Polybion",
+          "generic": "Vitamin B complex with folic acid, vitamin C",
+          "dose": "OD (once daily)",
+          "availability": "Syrup available"
         },
         {
-            "step": "6. Multivitamin tablets with Vit B complex, vit C."
+          "type": ["vitamin"],
+          "name": "T Neurobion Forte",
+          "generic": "Vitamin B complex",
+          "dose": "OD (once daily)",
+          "availability": "Syrup available"
         },
         {
-            "step": "7. Steam inhalation for relieving ENT congestion."
+          "type": ["antioxidant"],
+          "name": "T BC",
+          "generic": "β-carotene, vitamin E, vitamin C",
+          "dose": "OD (once daily)"
+        },
+        {
+          "type": ["vitamin"],
+          "name": "T Celin 500mg",
+          "generic": "Vitamin C",
+          "dose": "OD (once daily)"
+        },
+        {
+          "type": ["multivitamin"],
+          "name": "T MVT",
+          "generic": "Multivitamins",
+          "dose": "OD (once daily)"
+        },
+        {
+          "type": ["multivitamin", "mineral", "amino acid"],
+          "name": "T Health Ok",
+          "generic": "Multivitamins, multiminerals, amino acids with taurine & ginseng",
+          "dose": "OD (once daily)"
+        },
+        {
+          "type": ["vitamin"],
+          "name": "T Becozym C Forte",
+          "generic": "Vitamin B complex, vitamin C",
+          "dose": "OD (once daily)"
+        },
+        {
+          "type": ["H2 receptor antagonist"],
+          "name": "T Rantac/Zinetac/Aciloc 150mg",
+          "generic": "Ranitidine",
+          "dose": "1-0-1 (30 min before food)",
+          "pediatric_dose": "2 mg/kg/dose x 2 PO, 1-2 mg/kg/dose IV",
+          "other_forms": "Syp Rantac 75/5"
+        },
+        {
+          "type": ["proton pump inhibitor"],
+          "name": "T Pantocid 40mg",
+          "generic": "Pantoprazole",
+          "dose": "1-0-0 (30 min before food)",
+          "pediatric_dose": "1 mg/kg/dose POOD",
+          "other_forms": "T Pantop-IT (with itopride), Pantop-L (with levosulpiride), Inj Pantop 40mg IV OD/BD"
+        },
+        {
+          "type": ["proton pump inhibitor"],
+          "name": "T Rabicip/Happi/Razo 20mg",
+          "generic": "Rabeprazole",
+          "dose": "1-0-0 (fast acid suppression)",
+          "pediatric_dose": "",
+          "other_forms": "Inj Rabicip 20mg IV OD"
+        },
+        {
+          "type": ["proton pump inhibitor"],
+          "name": "C Omez 20mg",
+          "generic": "Omeprazole",
+          "dose": "1-0-0 empty stomach (1 hr before meal)",
+          "pediatric_dose": "",
+          "other_forms": ""
+        },
+        {
+          "type": ["proton pump inhibitor", "prokinetic"],
+          "name": "C Rabicip D/Roles-D",
+          "generic": "Rabeprazole (with domperidone)",
+          "dose": "",
+          "pediatric_dose": "",
+          "other_forms": "Pantop-D (with domperidone)"
+        },
+        {
+          "type": ["proton pump inhibitor"],
+          "name": "T Lanzole 30mg",
+          "generic": "Lansoprazole",
+          "dose": "1-0-0",
+          "pediatric_dose": "",
+          "other_forms": ""
+        },
+        {
+          "type": ["prokinetic"],
+          "name": "T Lesuride 25mg",
+          "generic": "Lesuride",
+          "dose": "1-0-0",
+          "pediatric_dose": "",
+          "other_forms": "Inj Lesuride 25mg IV OD"
+        },
+        {
+          "type": ["antacid"],
+          "name": "Digene",
+          "generic": "Simethicone + Mg(OH)2 + Al(OH)2 + Na carboxymethylcellulose",
+          "dose": "2tsp tds"
+        },
+        {
+          "type": ["antacid"],
+          "name": "Gelusil MPS",
+          "generic": "Simethicone + Mg(OH)2 + Al(OH)2 + Mg Al silicate",
+          "dose": "2tsp tds"
+        },
+        {
+          "type": ["antacid"],
+          "name": "Rantac MPS",
+          "generic": "Magaldrate + Simethicone",
+          "dose": ""
+        },
+        {
+          "type": ["antacid"],
+          "name": "Mucaine",
+          "generic": "Mg(OH)2 + Al(OH)2 + Oxethazaine",
+          "dose": ""
+        },
+        {
+          "type": ["antacid"],
+          "name": "Tricaine MPS",
+          "generic": "Simethicone + Mg(OH)2 + Al(OH)2 + Oxethazaine",
+          "dose": ""
+        },
+        {
+          "type": ["ulcer protective"],
+          "name": "Syp Sucralfate",
+          "generic": "Sucralfate",
+          "dose": ""
         }
-
-    ],
-    "antibiotic": [
-        {
-          "dose": "1. C Mox or Novamox 500mg 1-1-1 x 5 days (amoxicillin) Indications: for RTI including bronchitis, sinusitis, otitis media, UTI"
-        },
-        {
-          "dose": "2. C Roscillin 500mg 1-1-1-1 x 5 days (ampicillin) Indications: for RTI including bronchitis, sinusitis, otitis media, UTI"
-        },
-        {
-          "dose": "3. C or T Augmentin/Augpen/Mox CV 625/375 1-0-1 x 5 days (amox + clavulanic acid) T.N: T Moxiforce-CV or Mega-CV 625, Novaclav 625, kid tab-228. Dose: 20 mg/kg/dose BD Indications: for RTI, UTI, dental, skin and soft tissue infections, intra-abdominal and gynecological sepsis, cat scratches, infected animal/human bites)"
-        },
-        {
-          "dose": "4. C Novaclox 1-1-1 x 5 days (amoxicillin + dicloxacillin) (dramaclox) (ped tab available)"
-        },
-        {
-          "dose": "5. C Megapen 1-1-1-1 x 5 days (ampicillin + cloxacillin) (kid tab available)"
-        },
-        {
-          "dose": "6. C Aldinir or Zefdinir 300mg 1-0-1 x 5 days (cefdinir) (very expensive) Indications: pneumonia, a/c exacerbations of c/c bronchitis, ENT, skin"
-        },
-        {
-          "dose": "7. C Phexin/ sporidex 500mg 1-1-1-1 x 5 days (cephalexin) Indications: For bone and joint infections, pharyngitis, skin and soft tissue, tonsillitis, UTI"
-        },
-        {
-          "dose": "8. T Azithral or Azee 500mg 1-0-0 x 3 days 1 hr before food (azithromycin) (specific for respiratory infections) (also for skin, STD's, PID, urethritis, cervicitis)"
-        },
-        {
-          "dose": "9. T Roxid 150mg 1-0-1 x 5 days 30 min before food (roxithromycin) (for RTI, ENT, skin & soft tissue, genital tract infections)"
-        },
-        {
-          "dose": "10. T Droxyl 500mg 1-0-1 x 5 days (cefadroxil); Syp (125/5 or 250/5) available (30 mg/kg/day in 2 div doses) (strep throat infections, UTI, skin)"
-        },
-        {
-          "dose": "11. T Taxim-O/ topcef 50/100/200mg (DT tab available) 1-0-1 x 5 days (cefixime) (resp, urinary, biliary infections)"
-        },
-        {
-          "dose": "12. T Ceftas-AL 1-0-1 x 5 days (cefixime+ambroxol+lactobacillus spores)"
-        },
-        {
-          "dose": "13. T Ciplox 500mg (100/250/750) 1-0-1 x 5 days (ciprofloxacin) (for UTI, bone, soft tissue, gynecological, wound infection, Bact gastroenteritis, Respiratory) (all other FQ's C/I in children)"
-        },
-        {
-          "dose": "14. T Norflox 400mg 1-0-1 x 5 days (norfloxacin) (for UTI & GIT problems) (advise to drink more water). Best, if taken empty stomach with water, don't take with dairy products"
-        },
-        {
-          "dose": "15. T Oflox / Zenflox 200mg 1-0-1 x 5 days (ofloxacin) (c/c bronchitis, other respiratory, ENT)"
-        },
-        {
-          "dose": "16. T Levobact or Levoday or Loxof 500mg 1-0-0 x 5 days (levofloxacin) (advise to drink more water)"
-        },
-        {
-          "dose": "17. T Septran/Bactrim d.s. 1-0-1 x 5 days (sulfamethoxazole 800 + trimethoprim 160) (advise to drink more water) Syp available (200 + 40)/5 ml"
-        },
-        {
-          "dose": "18. T Proflox 400mg 1-0-1 x 5 days (pefloxacin) (for UTI & GIT problems)"
-        },
-        {
-          "dose": "19. T Cepodem/Monocef-o/podocef/macpod 100/200mg 1-0-1x 5 days (cefpodoxime) (for RTI, UTI, skin and soft tissue)"
-        },
-        {
-          "dose": "20. T Klox (cloxacillin) 250/500 mg tds/Qid (furuncle, abscess, carbuncle, impetigo, osteomyelitis, bites), syp (125/5) (100-200mg/kg/day in 4 divided doses)"
-        },
-        {
-          "dose": "21. T clarithro/claribid/synclar (clarithromycin) 250/500 mg 1-0-1 (resp, skin & soft tissue)"
-        },
-        {
-          "dose": "22. T Altacef 250/500 1-0-1 (cefuroxime) (URI, LRI, UTI)"
-        }
-      ],
-      "pediatric-antibiotic": [
-        {
-          "dose": "1. Syp Amoxicillin (125 /5 or 250/5) [T N:- mox, Novamox] (DT 125, 250 mg available) Dose: 30-50 mg/kg daily in divided doses Q8H or Q12H. In Practice 15 mg/kg/doseQ8H Novamox Dps (100 /1) available"
-        },
-        {
-          "dose": "Syp Augmentin/Mox CV 228 /5, 156 /5, 312 /5 available, (Amoxicillin + clavulanic acid) NovamoxCV/Mox CV dps, each 1 ml contain amox=80 mg, clavulanic acid=11.4 mg. Augmentin/ MoxCV Syp 457 (400 + 57)/5ml, 156(125 + 31)/5ml, 228(200+28)/5ml, 312(250 +62) available."
-        },
-        {
-          "dose": "2. Syp Ampicillin(125 /5 or 250/5) Dose is 50-100 mg/kg/daily in divided doses Q6H"
-        },
-        {
-          "dose": "3. Syp Azithromycin(100 /5 or 200/5) {T N:- azee, ATM} (Dose for children above 6 months-10mg/kg/day for 5 days)"
-        },
-        {
-          "dose": "4. Syp Cefixime (50 /5 or 100 /5 ) {T N:- taxim-o, topcef} (8 mg/kg/day in divided doses Q12H), Dps 25/1 available"
-        },
-        {
-          "dose": "5. Syp Septran (sulfamethoxazole 200+ trimethoprim 40) (6-10 mg/kg/24 hr(TMP) div into 2 PO) (dose calculated in terms of mg of TMP). Paed tablets: (100+20)"
-        },
-        {
-          "dose": "6. Syp Ampoxin Or Syp Roscilox(ampicillin +cloxacillin)"
-        },
-        {
-          "dose": "7. Syp Synclar/Maclar(125 /5)(clarithromycin)(15 mg/kg/day in 2 divided doses) (URTI, LRTI, sinusitis, otitis media etc) (125 DT available)"
-        },
-        {
-          "dose": "8. Syp Kefpod/Macpod(50 /5 or 100/5)( cefpodoxime)(10 mg/kg/day div into 2 doses PO) (LRTI, URTI)"
-        },
-        {
-          "dose": "9. Syp Phexin(cephalexin)(125 /5 or 250/5) (50-100 mg/kg day in 3 or 4 doses PO)(DT125, 250mg available). Phexin Dps 100 /1 available."
-        },
-        {
-          "dose": "10. Syp Altacef (cefuroxime)(125 /5)(30 mg/kg/day div into 2-3)"
-        }
-      ],
-    "antipyretics": [
-        "Drug X",
-        "Drug Y",
-        "Drug Z"
-    ]
-}
+  ]
+  
+},
+{
+  "disease": "cough",
+  "description": "Note:give antibiotics if infection is suspected.Advise an X-ray chest, AFB sputumfor otherwise unexplained Cough > 2-3 weeks not responding to antibiotics or cough with haemoptysis/chest pain/PUO/weight loss. Advise adequate hydration to help expectoration.",
+  "treatment": ["Pharyngeal demulcents provide symptomatic relief in dry cough arising from throat."],
+  "drugs": [
+      {
+          "type": "",
+          "name": "",
+          "dose": "",
+          "indications": "",
+          "contraindications": ""
+      }
+  ]
+},
+{"disease":"abdominal pain"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"febrile seizures"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"vomiting"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"loose stools"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"anaphylactic shock"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"wheeze"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"dog bite"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"injury"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"abrasion"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"I&D"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"suture removal"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"burns"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"chest trauma"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"COPD Acute Exacerbation + LRTI"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Laryngo-tracheo-bronchitis(Viral Croup)"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Incessant crying of infants/children"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Allergy/pruritus(itch)/urticaria(hives)"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Insect Bite Reaction"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Epistaxis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Nasopharyngitis/ cold/ acute coryza"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Sore Throat"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Parotitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Foreign body throat"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Laryngitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Globus sensation/globus pharyngis(feeling of lump in the throat)"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Tonsillitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Acute bronchiolitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Quinsy"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Acute epiglottitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Foreign body in Nose"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Nasal bone fractures"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Furuncle of the nose"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Sinusitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Nasal Polyp"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Otalgia(Earache)"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Wax in the Ear"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Foreign body in ear"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Trauma to external auditory canal"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Acute otitis externa"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Otomycosis(fungal infection of ear canal)"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Vertigo"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Perforation of tympanic membrane"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Tinnitus"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Stridor"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"AOM"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Perichondritis of pinna"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Constipation"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Bitter taste in mouth"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Anorexia"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hiccups/Singultus"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Continous belching/flatulence"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Epigastic Pain"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Dyspepsia & For weight gain in children"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Rectal Bleeding/hematochezia/melena"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Anal itching/pruritus ani"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Joint sprain"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Pain of muscle spasm / musculoskeletal/osteoarthritic pain"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Neck Pain"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"X-ray Views"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Back Pain"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Heel pain"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"First Aid in Fractures"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Anaemia"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Fall/impaired consciousness"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Feeling tired or fatigue/weakness"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Insomnia"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Aggressive Psychiatric Patient"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Chronic alcoholic with tremors"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Acute alcoholic intoxication"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Shivering"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hypotension"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Oedema"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Left ventricular failure"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hypoglycemia"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hyperglycemia"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Diabetic Ketoacidosis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hyperglycemic hyperosmolar Nonketotic coma(HONK) or HHS(hyperosmolarhyperglycemic state)"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"UTI"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hematuria"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hyperventilation"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hypertension"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Palpitation"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Chest pain"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Heartburn/pyrosis/cardialgia/acid indigestion"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Unstable Angina"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Nocturnal leg cramps"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Status Epilepticus"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Haemoptysis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Drugs predisposing to renal dysfunction"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Newly Detected Systemic Hypertension"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hyperlipidaemia"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hyperuricemia"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Steroid tapering"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hypothyroidism"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Sensory Disturbances"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Facial Nerve Palsy"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Trigeminal Neuralgia"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Giddiness/syncope"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Motion Sickness"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Memory defects & Forgetfulness"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Headache"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Migraine"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Tremor"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Caries Tooth"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Gum Abscess"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Gingivitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Cheilosis/angular stomatitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Halitosis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Aphthous Ulcers"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Oral Candidiasis(Oral Thrush)"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Dry Mouth(xerostomia)"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Opthalmology"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Conjunctivitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Scleritis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Superficial punctuate Keratitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Corneal Ulcer"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Fungal Corneal Ulcer"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Simple Allergic conjunctivitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Hordeolum Internum Externum Chalazion"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Blepharitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Corneal abrasion"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Acute Dacrocystitis"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Foreign body eye"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":"Blunt injury to eyeball"
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+{"disease":""
+,"description":"","treatment": [], "drugs": [{"type":"","name":"","dose":"","indications":"","contraindications":""}]  },
+""
+  ]}

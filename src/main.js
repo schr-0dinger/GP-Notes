@@ -13,6 +13,8 @@ function fetchData() {
       var resultDiv = document.getElementById('resultbox');
       resultDiv.innerHTML = ''; // Clear previous results
 
+      var drugGroup = [];
+
       for (var i = 0; i < database.symptom.length; i++) {
         if (database.symptom[i].disease !== undefined) {
           var disease = database.symptom[i].disease.toLowerCase();
@@ -28,14 +30,33 @@ function fetchData() {
         else {
 
           if (disease.includes(input)) {
+
             resultDiv.innerHTML += '<a href=# class="list-group-item">' + database.symptom[i].disease.toUpperCase() + '</a>';
             if (database.symptom[i].drugs) {
-              var n = database.symptom[i].drugs.length
+              var n = database.symptom[i].drugs.length;
               for (var j = 0; j < n; j++) {
+                var drugType = database.symptom[i].drugs[j].type[0];
+                var isDuplicate = false;
+
+                for (let k = 0; k < drugGroup.length; k++) {
+                  if (drugGroup[k] === drugType) {
+                    isDuplicate = true;
+                    break;
+                  }
+                }
+
+                if (!isDuplicate) {
+                  drugGroup.push(drugType);
+                }
+
+                console.log('New Array is: ' + drugGroup + ' ' + Array.isArray(drugGroup));
+
+                //Design a dynamic card collection that shows the result in a systematic way.
+
                 var result = '<div class="list-group">' +
                   '<a href="#" class="glass list-group-item list-group-item-action">' +
                   // '<p> Disease: ' + database.symptom[i].disease + '</p>' +
-                  '<p> Drug name: ' + database.symptom[i].drugs[j].name + '(' + database.symptom[i].drugs[j].generic + ')' + '</p>' +
+                  '<p> Drug name: ' + database.symptom[i].drugs[j].name + ' (' + database.symptom[i].drugs[j].generic + ')' + '</p>' +
                   '<p> Pediatric Dose: ' + database.symptom[i].drugs[j].pediatric_dose + '</p>' +
                   '</a>'
 

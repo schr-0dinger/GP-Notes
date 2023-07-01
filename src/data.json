@@ -169,38 +169,38 @@
           "indications": "(URI, LRI, UTI)"
       },
       {
-          "type": ["anti-pyretic","analgesic"],
+          "type": ["anti-pyretic/analgesic"],
           "name": "T Calpol/Panadol/Dolo 500mg/650mg",
           "generic": "P'mol or Acetaminophen",
           "dose": "1-1-1-1 x 3 days"
       },
       {
-          "type": ["anti-pyretic","analgesic"],
+          "type": ["anti-pyretic/analgesic"],
           "name": "T Ibugesic or Brufen 200/400/600mg",
           "generic": "Ibuprofen",
           "dose": "1-0-1 x 3 days"
       },
       {
-          "type": ["anti-pyretic","analgesic"],
+          "type": ["anti-pyretic/analgesic"],
           "name": "T Meftal or Ponstan 250mg/500",
           "generic": "Mefenamic Acid",
           "dose": "1-1-1 x 3 days",
           "indications": "(ideal for dental pain)"
       },
       {
-          "type": ["anti-pyretic","analgesic"],
+          "type": ["anti-pyretic/analgesic"],
           "name": "T Pirox/Dolonex 20mg",
           "generic": "Piroxicam",
           "dose": "1-0-0 x 3 days"
       },
       {
-          "type": ["anti-pyretic","analgesic"],
+          "type": ["anti-pyretic/analgesic"],
           "name": "T Ibugesic Plus",
           "generic": "Ibuprofen + P'mol",
           "dose": "1-0-1"
       },
       {
-          "type": ["anti-pyretic","analgesic"],
+          "type": ["anti-pyretic/analgesic"],
           "name": "T Meftal Forte/Meftagesic",
           "generic": "Meftal 500 + P/L 450"
       },

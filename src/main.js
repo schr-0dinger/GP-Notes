@@ -29,7 +29,7 @@ function fetchData() {
         }
         else {
 
-          if (disease.includes(input)) {
+          if (disease.indexOf(input) !== -1) {
 
             resultDiv.innerHTML += '<a href=# class="list-group-item">' + database.symptom[i].disease.toUpperCase() + '</a>';
             if (database.symptom[i].drugs) {

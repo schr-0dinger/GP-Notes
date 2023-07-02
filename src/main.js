@@ -58,9 +58,11 @@ function fetchData() {
                   // '<p> Disease: ' + database.symptom[i].disease + '</p>' +
                   '<p> Drug name: ' + database.symptom[i].drugs[j].name + ' (' + database.symptom[i].drugs[j].generic + ')' + '</p>' +
                   '<p> Pediatric Dose: ' + database.symptom[i].drugs[j].pediatric_dose + '</p>' +
-                  '</a>'
+                  '</a></div>'
 
                 resultDiv.innerHTML += result;
+
+                
               }
             }
           }

@@ -9,7 +9,7 @@
           "Tepid sponging with luke warm water st & SOS;give IV fluids for very high fever.",
           "Do BRE,ESR/CRP,URE , if infection is suspected & give Antibiotics for infection.",
           "T or Syp Meftal may be given Stat for high fever.",
-          "Antiulcerants(especially if certain antibiotics like macrolides, NSAIDs, steroids areprovided).",
+          "Antiulcerants(especially if certain antibiotics like macrolides, NSAIDs, steroids are provided).",
           "Multivitamin tablets with Vit B complex, vit C.",
           "Steam inhalation for relieving ENT congestion."
   ],
@@ -33,7 +33,7 @@
       {
           "type": ["antibiotic"],
           "name": "C or T Augmentin/Augpen/Mox CV 625/375",
-          "generic": "Amox + Clavulanic Acid",
+          "generic": "Amoxicillin + Clavulanic Acid",
           "dose": "1-0-1 x 5 days",
           "indications": "RTI, UTI, dental, skin and soft tissue infections, intra-abdominal and gynecological sepsis, cat scratches, infected animal/human bites)"
       },

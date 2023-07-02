@@ -31,7 +31,7 @@ function fetchData() {
 
           if (disease.indexOf(input) !== -1) {
 
-            resultDiv.innerHTML += '<a href=# class="list-group-item">' + database.symptom[i].disease.toUpperCase() + '</a>';
+            // resultDiv.innerHTML += '<a href=# class="list-group-item">' + database.symptom[i].disease.toUpperCase() + '</a>';
             if (database.symptom[i].drugs) {
               var n = database.symptom[i].drugs.length;
               for (var j = 0; j < n; j++) {
@@ -53,34 +53,50 @@ function fetchData() {
 
                 //Design a dynamic card collection that shows the result in a systematic way.
 
-                var result = '<div class="list-group">' +
-                  '<a href="#" class="glass list-group-item list-group-item-action">' +
-                  // '<p> Disease: ' + database.symptom[i].disease + '</p>' +
-                  '<p> Drug name: ' + database.symptom[i].drugs[j].name + ' (' + database.symptom[i].drugs[j].generic + ')' + '</p>' +
-                  '<p> Pediatric Dose: ' + database.symptom[i].drugs[j].pediatric_dose + '</p>' +
-                  '</a></div>'
+                var result = `
+                <div id="accordion"> 
+<div class="card glass format">
+    <div class="card-header">
+        <a id="resultbox" class="collapsed btn" data-bs-toggle="collapse" href="#${database.symptom[i].disease.toLowerCase().replace(/\s/g, "").replace(/\//g, "")}Id">
+        ${database.symptom[i].disease.toUpperCase()}
+        </a>
+    </div>
+    <div id="${database.symptom[i].disease.toLowerCase().replace(/\s/g, "").replace(/\//g, "")}Id" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+            <ul class="nav nav-pills justify-content-evenly" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#treatment">Treatment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#drug">Drugs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#pediatricdose">Pediatric dose</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="treatment" class="container tab-pane active"><br>
+                    ${database.symptom[i].treatment}
+                </div>
+                <div id="drug" class="container tab-pane fade"><br>
+                ${database.symptom[i].drugs[j].generic}
+                </div>
+                <div id="pediatricdose" class="container tab-pane fade"><br>
+                    ${database.symptom[i].drugs[j].pediatric_dose}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+</div>    
+`;
 
-                resultDiv.innerHTML += result;
-
-                
               }
             }
+            
+            resultDiv.innerHTML += result;
           }
-          // Prevent scrolling up when list group is clicked.
-          var listGroupItems = document.querySelectorAll(".list-group-item");
 
-          // Attach a click event listener to each list-group item
-          listGroupItems.forEach(function (item) {
-            item.addEventListener("click", function (event) {
-              // Prevent the default scrolling behavior
-              event.preventDefault();
-
-              // Add your custom logic here
-
-              // For example, you can perform some action or toggle a class on the clicked item
-              item.classList.toggle("active");
-            });
-          });
         }
       }
     })

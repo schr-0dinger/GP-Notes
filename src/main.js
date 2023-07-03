@@ -23,18 +23,18 @@ function fetchData() {
             if (disease.includes(input)) {
               const drugList = symptom.drugs
                 ? symptom.drugs
-                    .map(drug => drug.generic)
-                    .filter((drug, index, array) => array.indexOf(drug) === index)
-                    .map(
-                      drugfn => `
+                  .map(drug => drug.generic)
+                  .filter((drug, index, array) => array.indexOf(drug) === index)
+                  .map(
+                    drugfn => `
                         <div class="list-group">
                           <a href="#" class="format transparent list-group-item list-group-item-action">
                             <p>${drugfn}</p>
                           </a>
                         </div>
                       `
-                    )
-                    .join('')
+                  )
+                  .join('')
                 : '';
 
               const result = `
@@ -76,6 +76,14 @@ function fetchData() {
               `;
 
               resultDiv.innerHTML += result;
+
+              // Prevent scrolling when list-group-item is clicked
+              document.querySelectorAll('.list-group-item').forEach(item => {
+                item.addEventListener('click', event => {
+                  event.preventDefault();
+                });
+              });
+
             }
           }
         } else {
@@ -86,4 +94,5 @@ function fetchData() {
     .catch(error => {
       console.log('Error fetching data:', error);
     });
+
 }

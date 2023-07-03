@@ -59,8 +59,10 @@ function fetchData() {
                           </li>
                         </ul>
                         <div class="tab-content">
-                          <div id="treatment" class="container tab-pane active"><br>
-                            ${symptom.treatment}
+                          <div id="treatment" class="container format tab-pane active"><br>
+                            <ol>
+                              ${symptom.treatment.map(item => `<li>${item}</li>`).join('')}
+                            </ol>
                           </div>
                           <div id="drug" class="container tab-pane fade"><br>
                             ${drugList}

@@ -13,7 +13,7 @@ function fetchData() {
       var resultDiv = document.getElementById('resultbox');
       resultDiv.innerHTML = ''; // Clear previous results
 
-      var drugGroup = [];
+      var [drugGroup, drugName, drugList] = [[], [], []];
 
       for (var i = 0; i < database.symptom.length; i++) {
         if (database.symptom[i].disease !== undefined) {
@@ -48,8 +48,17 @@ function fetchData() {
                 if (!isDuplicate) {
                   drugGroup.push(drugType);
                 }
+                drugName.push(database.symptom[i].drugs[j].generic);
 
-                console.log('New Array is: ' + drugGroup + ' ' + Array.isArray(drugGroup));
+                var uniqueDrugName = [...new Set(drugName)];
+
+                var drugList = uniqueDrugName.map(function(drugfn) {
+                  return '<div class="list-group"><a href="#" class="format transparent list-group-item list-group-item-action">' +
+                    '<p>' + drugfn + '</p></a></div>';
+                });
+                            
+              
+                // console.log('New Array is: ' + drugGroup + ' ' + Array.isArray(drugGroup));
 
                 //Design a dynamic card collection that shows the result in a systematic way.
 
@@ -79,7 +88,7 @@ function fetchData() {
                     ${database.symptom[i].treatment}
                 </div>
                 <div id="drug" class="container tab-pane fade"><br>
-                ${database.symptom[i].drugs[j].generic}
+                ${drugList.join('')}
                 </div>
                 <div id="pediatricdose" class="container tab-pane fade"><br>
                     ${database.symptom[i].drugs[j].pediatric_dose}
@@ -93,7 +102,7 @@ function fetchData() {
 
               }
             }
-            
+            console.log('Unique drug array: ' + drugList + ' ' + Array.isArray(uniqueDrugName))
             resultDiv.innerHTML += result;
           }
 

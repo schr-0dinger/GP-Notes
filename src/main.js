@@ -60,13 +60,13 @@ function fetchData() {
 
                 accordionHTML += `
                   <div class="accordion-item glass">
-                    <h2 class="accordion-header glass">
+                    <div class="accordion-header glass">
                       <button class="accordion-button glass" data-bs-toggle="collapse" data-bs-target="#collapse${type
                         .replace(/\s/g, "")
                         .replace(/\//g, "")}">
                         ${type}
                       </button>
-                    </h2>
+                    </div>
                     <div id="collapse${type
                       .replace(/\s/g, "")
                       .replace(
@@ -100,7 +100,7 @@ function fetchData() {
     <div id="${database.symptom[i].disease
       .toLowerCase()
       .replace(/\s/g, "")
-      .replace(/\//g, "")}Id" class="collapse" data-bs-parent="#accordion">
+      .replace(/\//g, "")}Id" class="collapse" data-bs-parent="#accordion${i}">
         <div class="card-body">
             <ul class="nav nav-pills justify-content-evenly" role="tablist">
                 <li class="nav-item">
@@ -122,7 +122,9 @@ function fetchData() {
               </ol>
                 </div>
                 <div id="drug" class="container glass tab-pane fade"><br>
+                <div id="accordionExample">
                 ${accordionHTML}
+                </div>
                 </div>
                 <div id="pediatricdose" class="container tab-pane fade"><br>
                     

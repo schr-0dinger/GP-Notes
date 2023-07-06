@@ -11,15 +11,23 @@ body {
 }
 
 .transparent {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .glass {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
+  background-color: rgba(17, 25, 40, 0.75) !important;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  color: #fff;
+}
+
+.glass2 {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75) !important;
+  border: 0px;
   color: #fff;
 }
 
@@ -29,7 +37,7 @@ body {
 }
 
 .white{
-  color: #fff;
+  color: #fff !important;
 }
 
 #resultbox {

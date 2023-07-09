@@ -1,7 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Event listener for search bar
   document.getElementById("searchbar").addEventListener("keyup", fetchData);
-});
+
+  const generatedButtons = document.querySelectorAll('.accordion-item .list-group .btn');
+  const pediatricDoseBtn = document.getElementById('pediatricDoseBtn');
+
+  generatedButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      pediatricDoseBtn.classList.remove('disabled');
+    });
+  });
 
 // Function to fetch data from JSON file
 function fetchData() {
@@ -42,8 +50,11 @@ function fetchData() {
 
                 var drugListHTML = drugNames
                   .map(function (drugName) {
-                    return `<button type="button" id="${drugName.toLowerCase().replace(/[\s\/\(\)\&\+]/g,"")}Id" 
+                    if (drugName && typeof drugName === 'string') {
+                    const formatDrugName = drugName.toLowerCase().replace(/[\s\/\(\)\&\+\'\"\`\:\;\<\>]/g,'')
+                    return `<button type="button" id="${formatDrugName.toString()}Id" 
                     class="btn btn-primary transparent white list-group-item text-start format">${drugName}</button>`;
+                    }
                   })
                   .join("");
 
@@ -51,14 +62,14 @@ function fetchData() {
                   <div class="accordion-item transparent white">
                     <div class="accordion-header">
                       <button class="accordion-button transparent white" data-bs-toggle="collapse" data-bs-target="#collapse${type.replace(
-                        /[\s\/\(\)\&\+]/g,
+                        /[\s\/\(\)\&\+\'\"\<\>\`]/g,
                         ""
                       )}"><i class="fa-solid fa-pills fa-2xs"></i> &#160;${
                   type[0].toUpperCase() + type.substring(1)
                 }</button>
                     </div>
                     <div id="collapse${type.replace(
-                      /[\s\/\(\)\&\+]/g,
+                      /[\s\/\(\)\&\+\'\"\<\>\`]/g,
                       ""
                     )}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                       <div class="accordion-body transparent">
@@ -77,14 +88,14 @@ function fetchData() {
                   <div class="card glass format">
                     <div class="card-header">
                       <a id="resultbox" class="collapsed btn" data-bs-toggle="collapse" href="#${disease.replace(
-                        /[\s\/\(\)\&\+]/g,
+                        /[\s\/\(\)\&\+\'\"\<\>\`]/g,
                         ""
                       )}Id"><i class="fa-solid fa-circle-exclamation"></i> ${
                 disease[0].toUpperCase() + disease.substring(1)
               }</a>
                     </div>
                     <div id="${disease.replace(
-                      /[\s\/\(\)\&\+]/g,
+                      /[\s\/\(\)\&\+\'\"\<\>\`]/g,
                       ""
                     )}Id" class="collapse" data-bs-parent="#accordion${i}">
                       <div class="card-body">
@@ -96,7 +107,7 @@ function fetchData() {
                             <a class="nav-link mx-md-5" data-bs-toggle="pill" href="#drug"><i class="fa-solid fa-prescription"></i> Drugs</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="pill" href="#pediatricdose"><i class="fa-solid fa-baby"></i> Pediatric dose</a>
+                            <a class="nav-link disabled" id="pediatricDoseBtn" data-bs-toggle="pill" href="#pediatricdose"><i class="fa-solid fa-baby"></i> Pediatric dose</a>
                           </li>
                         </ul>
                         <div class="tab-content">
@@ -135,10 +146,6 @@ function fetchData() {
                 item.addEventListener("click", (event) => {
                   event.preventDefault();
                 });
-
-                const highlight = document.getElementById(
-                  '${drugName.toLowerCase().replace(/[s/()&+]/g,"")}Id'
-                );
               });
             }
           }
@@ -148,4 +155,6 @@ function fetchData() {
     .catch((error) => {
       console.log("Error fetching data:", error);
     });
-}
+}// fetchData() function ends here.
+
+}); //DOMContentLoaded 

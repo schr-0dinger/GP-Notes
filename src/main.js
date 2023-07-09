@@ -19,7 +19,7 @@ function fetchData() {
         if (input === "" || input.length === 1) {
           resultDiv.innerHTML = "";
         } else {
-          if (disease && disease.includes(input)) { // Use includes() method to check if input is found in disease
+          if (disease && disease.indexOf(input) !== -1) {
             if (database.symptom[i].drugs) {
               var drugTypeAccordion = {}; // Object to store drug types and corresponding drug names
 
@@ -42,7 +42,8 @@ function fetchData() {
 
                 var drugListHTML = drugNames
                   .map(function (drugName) {
-                    return `<a href="#" class="transparent white list-group-item">${drugName}</a>`;
+                    return `<button type="button" id="${drugName.toLowerCase().replace(/[\s\/\(\)\&\+]/g,"")}Id" 
+                    class="btn btn-primary transparent white list-group-item text-start format">${drugName}</button>`;
                   })
                   .join("");
 
@@ -50,9 +51,16 @@ function fetchData() {
                   <div class="accordion-item transparent white">
                     <div class="accordion-header">
                       <button class="accordion-button transparent white" data-bs-toggle="collapse" data-bs-target="#collapse${type.replace(
-                        /[\s\/\(\)\&\+]/g,"")}"><i class="fa-solid fa-pills fa-2xs"></i> &#160;${type[0].toUpperCase() + type.substring(1)}</button>
+                        /[\s\/\(\)\&\+]/g,
+                        ""
+                      )}"><i class="fa-solid fa-pills fa-2xs"></i> &#160;${
+                  type[0].toUpperCase() + type.substring(1)
+                }</button>
                     </div>
-                    <div id="collapse${type.replace(/[\s\/\(\)\&\+]/g,"")}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapse${type.replace(
+                      /[\s\/\(\)\&\+]/g,
+                      ""
+                    )}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                       <div class="accordion-body transparent">
                         <div class="list-group transparent">
                           ${drugListHTML}
@@ -69,9 +77,15 @@ function fetchData() {
                   <div class="card glass format">
                     <div class="card-header">
                       <a id="resultbox" class="collapsed btn" data-bs-toggle="collapse" href="#${disease.replace(
-                        /[\s\/\(\)\&\+]/g,"")}Id"><i class="fa-solid fa-circle-exclamation"></i> ${disease[0].toUpperCase() + disease.substring(1)}</a>
+                        /[\s\/\(\)\&\+]/g,
+                        ""
+                      )}Id"><i class="fa-solid fa-circle-exclamation"></i> ${
+                disease[0].toUpperCase() + disease.substring(1)
+              }</a>
                     </div>
-                    <div id="${disease.replace(/[\s\/\(\)\&\+]/g,""
+                    <div id="${disease.replace(
+                      /[\s\/\(\)\&\+]/g,
+                      ""
                     )}Id" class="collapse" data-bs-parent="#accordion${i}">
                       <div class="card-body">
                         <ul class="nav nav-pills justify-content-md-center flex-nowrap" role="tablist">
@@ -88,7 +102,9 @@ function fetchData() {
                         <div class="tab-content">
                           <div id="treatment" class="container format tab-pane active"><br>
                             <ol>
-                              ${database.symptom[i].treatment.map((item) => `<li>${item}</li>`).join("")}
+                              ${database.symptom[i].treatment
+                                .map((item) => `<li>${item}</li>`)
+                                .join("")}
                             </ol>
                           </div>
                           <div id="drug" class="container tab-pane fade"><br>
@@ -107,16 +123,22 @@ function fetchData() {
 
               resultDiv.innerHTML += result;
               // Initialize Bootstrap Collapse component
-              var accordions = document.querySelectorAll('[data-bs-toggle="collapse"]');
+              var accordions = document.querySelectorAll(
+                '[data-bs-toggle="collapse"]'
+              );
               accordions.forEach(function (accordion) {
                 new bootstrap.Collapse(accordion);
               });
 
               // Prevent scrolling when list-group-item is clicked
-              document.querySelectorAll('.list-group-item').forEach(item => {
-                item.addEventListener('click', event => {
+              document.querySelectorAll(".list-group-item").forEach((item) => {
+                item.addEventListener("click", (event) => {
                   event.preventDefault();
                 });
+
+                const highlight = document.getElementById(
+                  '${drugName.toLowerCase().replace(/[s/()&+]/g,"")}Id'
+                );
               });
             }
           }

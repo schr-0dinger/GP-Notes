@@ -52,9 +52,9 @@ function fetchData() {
                       <button class="accordion-button transparent white" data-bs-toggle="collapse" data-bs-target="#collapse${type.replace(
                         /[\s\/\(\)\&\+]/g,"")}"><i class="fa-solid fa-pills fa-2xs"></i> &#160;${type[0].toUpperCase() + type.substring(1)}</button>
                     </div>
-                    <div id="collapse${type.replace(/[\s\/\(\)\&\+]/g,"")}" class="accordion-collapse collapse glass2" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <div class="list-group">
+                    <div id="collapse${type.replace(/[\s\/\(\)\&\+]/g,"")}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body transparent">
+                        <div class="list-group transparent">
                           ${drugListHTML}
                         </div>
                       </div>
@@ -74,12 +74,12 @@ function fetchData() {
                     <div id="${disease.replace(/[\s\/\(\)\&\+]/g,""
                     )}Id" class="collapse" data-bs-parent="#accordion${i}">
                       <div class="card-body">
-                        <ul class="nav nav-pills justify-content-evenly" role="tablist">
+                        <ul class="nav nav-pills justify-content-md-center flex-nowrap" role="tablist">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="pill" href="#treatment"><i class="fa-solid fa-stethoscope"></i> Treatment</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="pill" href="#drug"><i class="fa-solid fa-prescription"></i> Drugs</a>
+                            <a class="nav-link mx-md-5" data-bs-toggle="pill" href="#drug"><i class="fa-solid fa-prescription"></i> Drugs</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="pill" href="#pediatricdose"><i class="fa-solid fa-baby"></i> Pediatric dose</a>
@@ -110,6 +110,13 @@ function fetchData() {
               var accordions = document.querySelectorAll('[data-bs-toggle="collapse"]');
               accordions.forEach(function (accordion) {
                 new bootstrap.Collapse(accordion);
+              });
+
+              // Prevent scrolling when list-group-item is clicked
+              document.querySelectorAll('.list-group-item').forEach(item => {
+                item.addEventListener('click', event => {
+                  event.preventDefault();
+                });
               });
             }
           }

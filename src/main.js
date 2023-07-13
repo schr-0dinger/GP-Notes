@@ -2,71 +2,76 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event listener for search bar
   document.getElementById("searchbar").addEventListener("keyup", fetchData);
 
-  const generatedButtons = document.querySelectorAll('.accordion-item .list-group .btn');
-  const pediatricDoseBtn = document.getElementById('pediatricDoseBtn');
+  const generatedButtons = document.querySelectorAll(
+    ".accordion-item .list-group .btn"
+  );
+  const pediatricDoseBtn = document.getElementById("pediatricDoseBtn");
 
   generatedButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      pediatricDoseBtn.classList.remove('disabled');
+    button.addEventListener("click", () => {
+      pediatricDoseBtn.classList.remove("disabled");
     });
   });
 
-// Function to fetch data from JSON file
-function fetchData() {
-  fetch("src/data.json")
-    .then((response) => response.json())
-    .then((database) => {
-      var input = document.getElementById("searchbar").value.toLowerCase();
-      var resultDiv = document.getElementById("resultbox");
-      resultDiv.innerHTML = ""; // Clear previous results
+  // Function to fetch data from JSON file
+  function fetchData() {
+    fetch("src/data.json")
+      .then((response) => response.json())
+      .then((database) => {
+        var input = document.getElementById("searchbar").value.toLowerCase();
+        var resultDiv = document.getElementById("resultbox");
+        resultDiv.innerHTML = ""; // Clear previous results
 
-      for (var i = 0; i < database.symptom.length; i++) {
-        var disease = database.symptom[i].disease?.toLowerCase(); // Use optional chaining to handle undefined disease property
+        for (var i = 0; i < database.symptom.length; i++) {
+          var disease = database.symptom[i].disease?.toLowerCase(); // Use optional chaining to handle undefined disease property
 
-        // Results are formatted here
-        if (input === "" || input.length === 1) {
-          resultDiv.innerHTML = "";
-        } else {
-          if (disease && disease.indexOf(input) !== -1) {
-            if (database.symptom[i].drugs) {
-              var drugTypeAccordion = {}; // Object to store drug types and corresponding drug names
+          // Results are formatted here
+          if (input === "" || input.length === 1) {
+            resultDiv.innerHTML = "";
+          } else {
+            if (disease && disease.indexOf(input) !== -1) {
+              if (database.symptom[i].drugs) {
+                var drugTypeAccordion = {}; // Object to store drug types and corresponding drug names
 
-              database.symptom[i].drugs.forEach((drug) => {
-                var drugType = drug.type[0];
-                var drugName = drug.generic;
+                database.symptom[i].drugs.forEach((drug) => {
+                  var drugType = drug.type[0];
+                  var drugName = drug.generic;
 
-                // Check if drug type already exists in the accordion object
-                if (drugType in drugTypeAccordion) {
-                  drugTypeAccordion[drugType].push(drugName);
-                } else {
-                  drugTypeAccordion[drugType] = [drugName];
-                }
-              });
+                  // Check if drug type already exists in the accordion object
+                  if (drugType in drugTypeAccordion) {
+                    drugTypeAccordion[drugType].push(drugName);
+                  } else {
+                    drugTypeAccordion[drugType] = [drugName];
+                  }
+                });
 
-              // Generate accordion HTML for each drug type
-              var accordionHTML = "";
-              for (var type in drugTypeAccordion) {
-                var drugNames = drugTypeAccordion[type];
+                // Generate accordion HTML for each drug type
+                var accordionHTML = "";
+                for (var type in drugTypeAccordion) {
+                  var drugNames = drugTypeAccordion[type];
 
-                var drugListHTML = drugNames
-                  .map(function (drugName) {
-                    if (drugName && typeof drugName === 'string') {
-                    const formatDrugName = drugName.toLowerCase().replace(/[\s\/\(\)\&\+\'\"\`\:\;\<\>]/g,'')
-                    return `<button type="button" id="${formatDrugName.toString()}Id" 
-                    class="btn btn-primary transparent white list-group-item text-start format">${drugName}</button>`;
-                    }
-                  })
-                  .join("");
+                  var drugListHTML = drugNames
+                    .map(function (drugName) {
+                      if (drugName && typeof drugName === "string") {
+                        const formatDrugName = drugName
+                          .toLowerCase()
+                          .replace(/[\s\/\(\)\&\+\'\"\`\:\;\<\>]/g, "")
+                          .toString();
+                        return `<button type="button" id="${formatDrugName}Id" 
+                    class="btn btn-primary transparent white list-group-item text-start format" onclick="pedDose('${formatDrugName}')">${drugName}</button>`;
+                      }
+                    })
+                    .join("");
 
-                accordionHTML += `
+                  accordionHTML += `
                   <div class="accordion-item transparent white">
                     <div class="accordion-header">
                       <button class="accordion-button transparent white" data-bs-toggle="collapse" data-bs-target="#collapse${type.replace(
                         /[\s\/\(\)\&\+\'\"\<\>\`]/g,
                         ""
                       )}"><i class="fa-solid fa-pills fa-2xs"></i> &#160;${
-                  type[0].toUpperCase() + type.substring(1)
-                }</button>
+                    type[0].toUpperCase() + type.substring(1)
+                  }</button>
                     </div>
                     <div id="collapse${type.replace(
                       /[\s\/\(\)\&\+\'\"\<\>\`]/g,
@@ -80,10 +85,10 @@ function fetchData() {
                     </div>
                   </div>
                 `;
-              }
+                }
 
-              // Insert the accordion HTML into the desired container element
-              var result = `
+                // Insert the accordion HTML into the desired container element
+                var result = `
                 <div id="accordion${i}">
                   <div class="card glass format">
                     <div class="card-header">
@@ -91,8 +96,8 @@ function fetchData() {
                         /[\s\/\(\)\&\+\'\"\<\>\`]/g,
                         ""
                       )}Id"><i class="fa-solid fa-circle-exclamation"></i> ${
-                disease[0].toUpperCase() + disease.substring(1)
-              }</a>
+                  disease[0].toUpperCase() + disease.substring(1)
+                }</a>
                     </div>
                     <div id="${disease.replace(
                       /[\s\/\(\)\&\+\'\"\<\>\`]/g,
@@ -132,29 +137,35 @@ function fetchData() {
                 </div>
               `;
 
-              resultDiv.innerHTML += result;
-              // Initialize Bootstrap Collapse component
-              var accordions = document.querySelectorAll(
-                '[data-bs-toggle="collapse"]'
-              );
-              accordions.forEach(function (accordion) {
-                new bootstrap.Collapse(accordion);
-              });
-
-              // Prevent scrolling when list-group-item is clicked
-              document.querySelectorAll(".list-group-item").forEach((item) => {
-                item.addEventListener("click", (event) => {
-                  event.preventDefault();
+                resultDiv.innerHTML += result;
+                // Initialize Bootstrap Collapse component
+                var accordions = document.querySelectorAll(
+                  '[data-bs-toggle="collapse"]'
+                );
+                accordions.forEach(function (accordion) {
+                  new bootstrap.Collapse(accordion);
                 });
-              });
+
+                // Prevent scrolling when list-group-item is clicked
+                document
+                  .querySelectorAll(".list-group-item")
+                  .forEach((item) => {
+                    item.addEventListener("click", (event) => {
+                      event.preventDefault();
+                    });
+                  });
+              }
             }
           }
         }
-      }
-    })
-    .catch((error) => {
-      console.log("Error fetching data:", error);
-    });
-}// fetchData() function ends here.
+      })
+      .catch((error) => {
+        console.log("Error fetching data:", error);
+      });
+  } // fetchData() function ends here.
+}); //DOMContentLoaded
 
-}); //DOMContentLoaded 
+function pedDose(drug) {
+  document.getElementById("pediatricDoseBtn").classList.remove("disabled");
+  console.log(drug);
+}

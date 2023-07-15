@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           .replace(/[\s\/\(\)\&\+\'\"\`\:\;\<\>]/g, "")
                           .toString();
                         return `<button type="button" id="${formatDrugName}Id" 
-                    class="btn btn-primary transparent white list-group-item text-start format" onclick="pedDose('${formatDrugName}')">${drugName}</button>`;
+                    class="btn btn-primary transparent white list-group-item text-start format" onclick="pedDose('${drugName}', )">${drugName}</button>`;
                       }
                     })
                     .join("");
@@ -128,7 +128,12 @@ document.addEventListener("DOMContentLoaded", () => {
                               ${accordionHTML}
                             </div>
                           </div>
-                          <div id="pediatricdose" class="container tab-pane fade"><br>
+                          <div id="pediatricdose" class="container tab-pane fade">
+                            <div class="mb-3">
+                              <label for="" id="DrugDoseHeader" class="form-label">Pediatric Dose Calculation</label>
+                                <input type="number" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="Enter Weight in Kg">
+                              <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -167,5 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function pedDose(drug) {
   document.getElementById("pediatricDoseBtn").classList.remove("disabled");
-  console.log(drug);
+  document.getElementById("DrugDoseHeader").innerHTML = `${drug} Dose Calculation`;
 }
+

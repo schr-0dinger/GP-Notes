@@ -16,163 +16,25 @@
   "drugs": [
       {
           "type": ["antibiotic"],
-          "name": "C Mox / Novamox 500mg",
           "generic": "Amoxicillin",
-          "dose": "500mg 1-1-1 x 5 days",
+          "dose": {
+            "tab":["500mg","1-1-1","5 days"]
+          },
           "pediatric_dose":"10-20mg/kg/dose",
           "indications": "RTI, bronchitis, sinusitis, otitis media, UTI",
           "contraindications": ""
       },
       {
-          "type": ["antibiotic"],
-          "name": "C Roscillin 500mg",
-          "generic": "Ampicillin",
-          "dose": "1-1-1-1 x 5 days",
-          "indications": "RTI, bronchitis, sinusitis, otitis media, UTI"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "C or T Augmentin/Augpen/Mox CV 625/375",
-          "generic": "Amoxicillin + Clavulanic Acid",
-          "dose": "1-0-1 x 5 days",
-          "indications": "RTI, UTI, dental, skin and soft tissue infections, intra-abdominal and gynecological sepsis, cat scratches, infected animal/human bites)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "C Novaclox",
-          "generic": "Amoxicillin + Dicloxacillin",
-          "dose": "1-1-1 x 5 days",
-          "indications": "(dramaclox) (ped tab available)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "C Megapen",
-          "generic": "Ampicillin + Cloxacillin",
-          "dose": "1-1-1-1 x 5 days",
-          "indications": "(kid tab available)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "C Aldinir or Zefdinir 300mg",
-          "generic": "Cefdinir",
-          "dose": "1-0-1 x 5 days",
-          "indications": "(very expensive) Indications: pneumonia, a/c exacerbations of c/c bronchitis, ENT, skin"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "C Phexin/ sporidex 500mg",
-          "generic": "Cephalexin",
-          "dose": "1-1-1-1 x 5 days",
-          "indications": "Indications: For bone and joint infections, pharyngitis, skin and soft tissue, tonsillitis, UTI"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Azithral or Azee 500mg",
-          "generic": "Azithromycin",
-          "dose": "1-0-0 x 3 days 1 hr before food",
-          "indications": "(specific for respiratory infections) (also for skin, STD's, PID, urethritis, cervicitis)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Roxid 150mg",
-          "generic": "Roxithromycin",
-          "dose": "1-0-1 x 5 days 30 min before food",
-          "indications": "(for RTI, ENT, skin & soft tissue, genital tract infections)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Droxyl 500mg",
-          "generic": "Cefadroxil",
-          "dose": "1-0-1 x 5 days",
-          "indications": "; Syp (125/5 or 250/5) available (30 mg/kg/day in 2 div doses) (strep throat infections, UTI, skin)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Taxim-O/ topcef 50/100/200mg (DT tab available)",
-          "generic": "Cefixime",
-          "dose": "1-0-1 x 5 days",
-          "indications": "(resp, urinary, biliary infections)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Ceftas-AL",
-          "generic": "Cefixime + Ambroxol + Lactobacillus Spores",
-          "dose": "1-0-1 x 5 days"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Ciplox 500mg (100/250/750)",
-          "generic": "Ciprofloxacin",
-          "dose": "1-0-1 x 5 days",
-          "indications": "(for UTI, bone, soft tissue, gynecological, wound infection, Bact gastroenteritis, Respiratory) (all other FQ's C/I in children)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Norflox 400mg",
-          "generic": "Norfloxacin",
-          "dose": "1-0-1 x 5 days",
-          "indications": "(for UTI & GIT problems) (advise to drink more water). Best, if taken empty stomach with water, don't take with dairy products"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Oflox / Zenflox 200mg",
-          "generic": "Ofloxacin",
-          "dose": "1-0-1 x 5 days",
-          "indications": "(c/c bronchitis, other respiratory, ENT)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Levobact or Levoday or Loxof 500mg",
-          "generic": "Levofloxacin",
-          "dose": "1-0-0 x 5 days",
-          "indications": "(advise to drink more water)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Septran/Bactrim d.s.",
-          "generic": "Sulfamethoxazole 800 + Trimethoprim 160",
-          "dose": "1-0-1 x 5 days",
-          "indications": "(advise to drink more water) Syp available (200 + 40)/5 ml"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Proflox 400mg",
-          "generic": "Pefloxacin",
-          "dose": "1-0-1 x 5 days",
-          "indications": "(for UTI & GIT problems)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Cepodem/Monocef-o/podocef/macpod 100/200mg",
-          "generic": "Cefpodoxime",
-          "dose": "1-0-1x 5 days",
-          "indications": "(for RTI, UTI, skin and soft tissue)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Klox (cloxacillin) 250/500 mg",
-          "generic": "Tds/Qid (furuncle, abscess, carbuncle, impetigo, osteomyelitis, bites)",
-          "dose": "syp (125/5) (100-200mg/kg/day in 4 divided doses)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T clarithro/claribid/synclar",
-          "generic": "Clarithromycin",
-          "dose": "250/500 mg 1-0-1",
-          "indications": "(resp, skin & soft tissue)"
-      },
-      {
-          "type": ["antibiotic"],
-          "name": "T Altacef 250/500",
-          "generic": "Cefuroxime",
-          "dose": "1-0-1",
-          "indications": "(URI, LRI, UTI)"
-      },
-      {
           "type": ["anti-pyretic/analgesic"],
-          "name": "T Calpol/Panadol/Dolo 500mg/650mg",
-          "generic": "P'mol or Acetaminophen",
-          "dose": "1-1-1-1 x 3 days"
+          "generic": "Paracetamol",
+          "dose": {
+            "tab":["650mg","1-1-1-1","3 days"]
+          },
+          "pediatric_dose":{
+            "drops":["100/1"],
+            "syrup":["125/5", "250/5"],         
+            "suppository":["80","170","250"]
+          }
       },
       {
           "type": ["anti-pyretic/analgesic"],

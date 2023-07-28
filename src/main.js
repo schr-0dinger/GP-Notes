@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   generatedButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      pediatricDoseBtn.classList.remove("disabled");
+      pediatricDoseBtn.classList.remove("disabled"); // Enabled pediatric dose btn when drug name is clicked
     });
   });
 
@@ -17,52 +17,56 @@ document.addEventListener("DOMContentLoaded", () => {
   function fetchData() {
     fetch("src/data.json")
       .then((response) => response.json())
-      .then((database) => {
-        var input = document.getElementById("searchbar").value.toLowerCase();
-        var resultDiv = document.getElementById("resultbox");
+      .then((database) => { // Fetch database
+        var input = document.getElementById("searchbar").value.toLowerCase(); // Assign search input
+        var resultDiv = document.getElementById("resultbox"); // Get HTML result box access
         resultDiv.innerHTML = ""; // Clear previous results
 
-        for (var i = 0; i < database.symptom.length; i++) {
+        for (var i = 0; i < database.symptom.length; i++) { // Iter through the whole database
           var disease = database.symptom[i].disease?.toLowerCase(); // Use optional chaining to handle undefined disease property
 
           // Results are formatted here
-          if (input === "" || input.length === 1) {
+          if (input === "" || input.length === 1) { // Display results only if search input has more than 1 character
             resultDiv.innerHTML = "";
           } else {
-            if (disease && disease.indexOf(input) !== -1) {
+            if (disease && disease.indexOf(input) !== -1) { // Check if disease is present in the 'i'th iteration of database
               if (database.symptom[i].drugs) {
                 var drugTypeAccordion = {}; // Object to store drug types and corresponding drug names
 
                 database.symptom[i].drugs.forEach((drug) => {
-                  var drugType = drug.type[0];
-                  var drugName = drug.generic;
+                  var drugType = drug.type[0]; // Get the drug type for the drug in the 'i'th iteration
+                  var drugName = drug.generic; // Get the drug name in the 'i'th iteration
 
                   // Check if drug type already exists in the accordion object
                   if (drugType in drugTypeAccordion) {
-                    drugTypeAccordion[drugType].push(drugName);
+                    // drugTypeAccordion is an array storing all the drug types -> Opens up to show drugs belonging to same type
+                    // If drugType is not already present in drugTypeAccordion, add to that array
+                    drugTypeAccordion[drugType].push(drugName); 
                   } else {
                     drugTypeAccordion[drugType] = [drugName];
                   }
                 });
 
                 // Generate accordion HTML for each drug type
+                // This accordion HTML is added to the result box
                 var accordionHTML = "";
-                for (var type in drugTypeAccordion) {
-                  var drugNames = drugTypeAccordion[type];
+                for (var type in drugTypeAccordion) { // Iters through the array drugTypeAccordion
+                  var drugNames = drugTypeAccordion[type]; // Each element of the array is assigned to the variable on each iteration
 
-                  var drugListHTML = drugNames
+                  var drugListHTML = drugNames // Drug names belonging to the same class are stored in the corresponding drugTypeAccordion
                     .map(function (drugName) {
                       if (drugName && typeof drugName === "string") {
-                        const formatDrugName = drugName
+                        const formatDrugName = drugName // Formatting the drugname so that special characters are not involved
                           .toLowerCase()
                           .replace(/[\s\/\(\)\&\+\'\"\`\:\;\<\>]/g, "")
                           .toString();
-                        return `<button type="button" id="${formatDrugName}Id" 
+                        // Each drug name buttons are assigned a generated id based on their formatted drugName
+                        return `<button type="button" id="${formatDrugName}Id"
                     class="btn btn-primary transparent white list-group-item text-start format" onclick="pedDose('${drugName}', )">${drugName}</button>`;
                       }
                     })
                     .join("");
-
+                  /* Each accordion is generated to the number of drug types (without repetition, so that drugs belonging to the same class can be grouped together)  */
                   accordionHTML += `
                   <div class="accordion-item transparent white">
                     <div class="accordion-header">
